@@ -19,8 +19,10 @@ Here are some ideas to get you started:
 ## Oiii eu sou a Pedro César....
 <div align="center">
   <a href="https://github.com/pedrocesarp">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=pedrocesarp&show_icons=true&theme=vue&include_all_commits=true&count_private=true"/>
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedrocesarp&layout=compact&langs_count=7&theme=vue"/>
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=pedrocesarp&show_icons=true&theme=vue&include_all_commits=true&count_private=true"/>
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedrocesarp&layout=compact&langs_count=7&theme=vue"/>
+    
+    
 </div>
 
 <div style="display: inline_block"><br>
