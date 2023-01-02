@@ -1,29 +1,23 @@
 import { Container,MovieList, Movie } from "./styles";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+
 
 
 function Home () {
 
-    const movies = [
-        {   
-            id: 1,
-            title: "Tomb Raider",
-            image_url: "https://img.elo7.com.br/product/zoom/2692A3C/big-poster-filme-lara-croft-tomb-raider-2018-lo01-90x60-cm-lara-croft.jpg"
+    const [movies, setMovies] = useState([])
+    const image_path = "https://image.tmdb.org/t/p/w500"
 
-        },
-        {
-            id: 2,
-            title: "Tomb",
-            image_url: "https://img.elo7.com.br/product/zoom/2692A3C/big-poster-filme-lara-croft-tomb-raider-2018-lo01-90x60-cm-lara-croft.jpg"
 
-        },
-        {
-            id: 3,
-            title: "Tomb Raider: A Origem",
-            image_url: "https://img.elo7.com.br/product/zoom/2692A3C/big-poster-filme-lara-croft-tomb-raider-2018-lo01-90x60-cm-lara-croft.jpg"
+    useEffect (()=>{
+       
+        fetch ('https://api.themoviedb.org/3/movie/popular?api_key=7b135a13b80db570c196072fa87cd19c&language=en-US&page=1')   // revisar videio 03 - 06:00
+            .then (response=> response.json())
+            .then (data => setMovies (data.results))
 
-        },
-
-    ]
+    }, [])
+    
 
     return (
         <Container>
@@ -33,7 +27,7 @@ function Home () {
                 {movies.map(movie=> {
                     return (
                         <Movie key = {movie.id}>
-                            <a href="https://www.google.com/"><img src = {movie.image_url} alt={movie.title}/></a>
+                            <Link to = {`/details/${movie.id}`} > <img src = {`${image_path}${movie.poster_path}`} alt={movie.title}/> </Link>
                             <span>{movie.title}</span>
                         </Movie>
                     )
@@ -47,3 +41,5 @@ function Home () {
 }
 
 export default Home;
+
+ 
