@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Container } from "./styles"
+import { Keyapi } from "../../config/key"
 
 function Details () {
 
@@ -12,7 +13,7 @@ function Details () {
 
     useEffect (()=>{
        
-        fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=7b135a13b80db570c196072fa87cd19c&language=en-US`)
+        fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=${Keyapi}&language=en-US`)
             .then (response=>response.json())
             .then (data => {
 

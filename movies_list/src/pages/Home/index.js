@@ -1,7 +1,7 @@
 import { Container,MovieList, Movie } from "./styles";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-
+import { Keyapi } from "../../config/key";
 
 
 function Home () {
@@ -12,7 +12,7 @@ function Home () {
 
     useEffect (()=>{
        
-        fetch ('https://api.themoviedb.org/3/movie/popular?api_key=7b135a13b80db570c196072fa87cd19c&language=en-US&page=1')   // revisar videio 03 - 06:00
+        fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${Keyapi}&language=en-US&page=1`)
             .then (response=> response.json())
             .then (data => setMovies (data.results))
 
