@@ -45,7 +45,7 @@ a:hover {
 `;
 
 export const ImgPag = styled.img`
-  cursor: pointer;
+    cursor: pointer;
     height: 20px;
     width: 30px
 
@@ -72,7 +72,8 @@ export const FilterGenres = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 5rem;
+    margin: 2rem;
+    margin-top:1rem;
 
     @media (max-width: 768px) {
     justify-content: start;
@@ -86,9 +87,11 @@ export const FilterGenres = styled.div`
 export const GenresCard = styled.div`
   background-color: #ffff;
   color: #2d0c5e;
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
   &:hover {
@@ -116,13 +119,39 @@ export const GenresCardChoosed = styled.div`
   gap: 10px;
   background-color: #6654da;
   color: #ffff;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 700;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  border-radius: 10px;
   @media (max-width: 768px) {
     padding-left: 15px;
     padding-right: 15px;
   }
 `;
+
+//* img cancel
+export const ImgCancel= styled.img `
+
+    cursor: pointer;
+    height: 15px;
+    width: 15px
+
+`
+
+// * título home
+export const TitleHome =styled.h2 `
+  text-align: center;
+  margin: 3rem;
+  font-size: 40px;
+
+`
+
+// * subtítulo home
+export const SubtitleHome =styled.p `
+  text-align: center;
+`
+

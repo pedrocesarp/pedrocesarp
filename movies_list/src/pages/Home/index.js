@@ -2,6 +2,7 @@ import * as S from "./styles";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import fleche from "../../assets/fleche.png";
+import cancel from "../../assets/cancel.png"
 import Header from "../../components/Header";
 import { getDayMovies } from "../../services/getDayMovies";
 import { getGenres } from "../../services/getGenres";
@@ -26,6 +27,7 @@ function Home () {
         return (
             <S.GenresCardChoosed key={genre.id}>
                 <S.GenresP onClick={() => setFilter(genre.id)}>{genre.name}</S.GenresP>
+                <S.ImgCancel src = {cancel} alt="icone para cancelar" onClick={() => setFilter("") }/>
             </S.GenresCardChoosed>
         );
         } else {
@@ -63,6 +65,9 @@ function Home () {
        <>          
         <Header/>
         <S.Container>
+            <S.TitleHome>Filmes e Séries em alta da semana</S.TitleHome>
+            <S.SubtitleHome>Filtrar por gênero:</S.SubtitleHome>
+
                 <S.FilterGenres>
                     {renderGender}
                 </S.FilterGenres>
@@ -91,12 +96,3 @@ function Home () {
 export default Home;
 
  
-
-     {/* {movies.map(movie=> {
-                    return (
-                        <Movie key = {movie.id}>
-                            <Link to = {`/details/${movie.id}`} > <img src = {`${image_path}${movie.poster_path}`} alt={movie.title}/> </Link>
-                            <span>{movie.title}</span>
-                        </Movie>
-                    )
-                })} */}

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Header = styled.header`
   display: flex;
   padding: 25px;
-  /* background-color:#808080; */
   background-image: linear-gradient(to bottom, #6654da  , black);
   margin-bottom: 3rem;
   margin-top: -2rem;
